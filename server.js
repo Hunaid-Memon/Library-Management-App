@@ -1,6 +1,10 @@
 const express = require('express');
+const connectDB = require('./config/db');
 
-const app = express();
+const app = express(); 
+
+// Connect to MongoDB
+connectDB()
 
 app.get('/', (req, res) => res.json({ msg: 'Welcome to the Library Management App' }));
 
